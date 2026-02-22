@@ -10,7 +10,7 @@ use App\Services\TrashMailService;
 
 echo "Updating IMAP configurations...\n";
 
-// Fetch the first IMAP account (Assuming ID 1 based on previous output)
+// Fetch the first IMAP account (Assuming ID 1)
 $imap = Imap::first();
 
 if (!$imap) {
@@ -18,14 +18,10 @@ if (!$imap) {
     exit;
 }
 
-echo "Current Settings:\n";
-echo "Host: " . $imap->host . "\n";
-echo "Username: " . $imap->username . "\n";
-
 // New Settings
-$newHost = 'mail.dev-shadin.com';
-$newUser = 'me@dev-shadin.com';
-$newPass = 'me@dev-shadin.com2200';
+$newHost = 'node-asia-2.boostedhost-dns.com';
+$newUser = 'support@inboxtrash.com';
+$newPass = 'haMXJw8qOA5HJL$w';
 $newPort = 993;
 $newEncryption = 'ssl';
 $newValidateCert = false;
@@ -34,8 +30,6 @@ echo "\nApplying New Settings:\n";
 echo "Host: $newHost\n";
 echo "Username: $newUser\n";
 echo "Port: $newPort\n";
-echo "Encryption: $newEncryption\n";
-echo "Validate Cert: " . ($newValidateCert ? 'true' : 'false') . "\n";
 
 $imap->host = $newHost;
 $imap->username = $newUser;
@@ -45,7 +39,7 @@ $imap->encryption = $newEncryption;
 $imap->validate_certificates = $newValidateCert;
 $imap->save();
 
-echo "\nSettings saved.\n";
+echo "\nSettings saved in database!\n";
 
 echo "\nTesting connection with saved settings...\n";
 $service = new TrashMailService();
