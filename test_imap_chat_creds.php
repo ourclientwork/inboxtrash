@@ -19,10 +19,10 @@ echo "--------------------------------------------------\n";
 
 // Test New Credentials
 echo "Testing IMAP with USER PROVIDED credentials...\n";
-$host = "mail.dev-shadin.com";
-$user = "me@dev-shadin.com";
-$pass = "me@dev-shadin.com2200"; // Escaped $ sign
-$port = 465;
+$host = "mail.inboxtrash.com";
+$user = "support@inboxtrash.com";
+$pass = "q=X%;-)A+6NTmpe%"; // Escaped $ sign
+$port = 993;
 $encryption = "ssl";
 
 

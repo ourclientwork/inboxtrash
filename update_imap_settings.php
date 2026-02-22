@@ -19,9 +19,9 @@ if (!$imap) {
 }
 
 // New Settings
-$newHost = 'node-asia-2.boostedhost-dns.com';
+$newHost = 'mail.inboxtrash.com';
 $newUser = 'support@inboxtrash.com';
-$newPass = 'haMXJw8qOA5HJL$w';
+$newPass = 'q=X%;-)A+6NTmpe%';
 $newPort = 993;
 $newEncryption = 'ssl';
 $newValidateCert = false;
